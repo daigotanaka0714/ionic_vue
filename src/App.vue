@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <Header />
     <ion-app>
-      <ion-vue-router />
+      <Header />
+        <ion-vue-router />
+      <Tabs />
     </ion-app>
-    <Tabs />
   </div>
 </template>
 

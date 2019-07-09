@@ -1,7 +1,19 @@
 <template>
-  <ion-header>
+  <ion-header translucent>
     <ion-toolbar>
-      <ion-title>Hello World</ion-title>
+      <ion-buttons slot="secondary">
+        <ion-button>
+          <ion-icon slot="icon-only" name="logo-ionic"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-title>Header</ion-title>
+
+      <ion-buttons slot="primary">
+        <ion-button>
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 </template>
