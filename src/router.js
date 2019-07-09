@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Home from './views/Home.vue';
+import Top from './views/Top.vue';
 import {
   IonicVueRouter
 } from '@ionic/vue';
@@ -11,8 +11,14 @@ export default new IonicVueRouter({
   base: process.env.BASE_URL,
   routes: [{
       path: '/',
+      name: 'top',
+      component: Top
+    },
+    {
+      path: '/home',
       name: 'home',
-      component: Home
+      component: () =>
+        import( /* webpackChunkName: "home" */ './views/Home.vue')
     },
     {
       path: '/about',

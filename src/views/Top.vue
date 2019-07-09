@@ -11,7 +11,7 @@ import Header from '../components/Header.vue'
 import Cards from '../components/Cards.vue'
 import Tabs from '../components/Tabs.vue'
 export default {
-  name: "home",
+  name: "top",
   components: {
     Header,
     Cards,
