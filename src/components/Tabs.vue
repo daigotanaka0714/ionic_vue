@@ -1,10 +1,10 @@
 <template>
   <!-- Listen to before and after tab change events -->
-  <ion-tabs @IonTabsWillChange="beforeTabChange" @IonTabsDidChange="afterTabChange">
-    <ion-tab tab="/" :routes="getMatchedRoutes">
+  <ion-tabs>
+    <ion-tab tab="top">
       <Top />
     </ion-tab>
-    <ion-tab tab="home" :routes="getMatchedRoutes">
+    <ion-tab tab="home">
       <Home />
     </ion-tab>
 
@@ -19,14 +19,14 @@
     </ion-tab>-->
 
     <!-- Get matched routes with a helper method -->
-    <ion-tab tab="about" :routes="getMatchedRoutes">
+    <ion-tab tab="about">
       <About />
     </ion-tab>
 
     <!-- Use v-slot:bottom with Vue ^2.6.0 -->
     <template slot="bottom">
       <ion-tab-bar>
-        <ion-tab-button tab="/">
+        <ion-tab-button tab="top">
           <ion-icon name="logo-freebsd-devil"></ion-icon>
           <ion-label>top</ion-label>
         </ion-tab-button>
@@ -50,7 +50,7 @@
         </ion-tab-button>-->
 
         <!-- Provide custom click handler -->
-        <ion-tab-button tab="about" @click="goToAboutTab">
+        <ion-tab-button tab="about">
           <ion-icon name="information-circle"></ion-icon>
           <ion-label>About</ion-label>
         </ion-tab-button>
@@ -60,8 +60,16 @@
 </template>
 
 <script>
+import Top from '../views/Top.vue'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
 export default {
-
+  name: 'tabs',
+  components: {
+    Top,
+    Home,
+    About
+  }
 }
 </script>
 
